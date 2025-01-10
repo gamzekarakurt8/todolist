@@ -1,0 +1,235 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giris</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .todo-form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+            .todo-form input {
+                width: 75%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .todo-form button {
+                width: 20%;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                .todo-form button:hover {
+                    background-color: #218838;
+                }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            li.completed {
+                text-decoration: line-through;
+                color: #888;
+            }
+
+        button.delete {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            button.delete:hover {
+                background-color: #c82333;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <div class="todo-form">
+            <input type="text" id="todo-title" placeholder="Enter a task" />
+            <button id="add-todo">Add</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+
+        const apiUrl = "https://localhost:7018/api/todo"; // Backend API URL
+
+        // Load todos on page load
+        document.addEventListener("DOMContentLoaded", loadTodos);
+
+        // Add new todo
+        document.getElementById("add-todo").addEventListener("click", async () => {
+            const title = document.getElementById("todo-title").value.trim();
+            if (!title) return alert("Please enter a task!");
+
+            const newTodo = { title, isCompleted: false };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(newTodo),
+                });
+                if (response.ok) {
+                    loadTodos();
+                    document.getElementById("todo-title").value = "";
+                } else {
+                    alert("Failed to add task.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Error while adding task.");
+            }
+        });
+
+        // Load todos from the backend
+        async function loadTodos() {
+            try {
+                const response = await fetch(apiUrl);
+                if (response.ok) {
+                    const todos = await response.json();
+                    const todoList = document.getElementById("todo-list");
+                    todoList.innerHTML = ""; // Clear current list
+
+                    todos.forEach((todo) => {
+                        const li = document.createElement("li");
+                        li.className = todo.isCompleted ? "completed" : "";
+
+                        li.innerHTML = `
+                                      <input type="checkbox" id="checkbox-${todo.id}"
+                    ${todo.isCompleted ? "checked" : ""}
+                    onchange="toggleTodoCompletion(${todo.id})" />
+                <span class="todo-title">${todo.title}</span>
+            <button class="delete" onclick="deleteTodo(${todo.id})">Delete</button>`;
+                          
+                        todoList.appendChild(li);
+                    });
+                } else {
+                    alert("Failed to load tasks.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Error while loading tasks.");
+            }
+        }
+
+        // Delete a todo
+        async function deleteTodo(id) {
+            try {
+                const response = await fetch(`${apiUrl}/${id}`, {
+                    method: "DELETE",
+                });
+                if (response.ok) {
+                    loadTodos();
+                    
+                } else {
+                    alert("Failed to delete task.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("Error while deleting task.");
+            }
+        }
+
+        async function toggleTodoCompletion(id) {
+            try {
+                // Checkbox durumunu al
+                const checkbox = document.getElementById(`checkbox-${id}`);
+                const isChecked = checkbox.checked;
+
+                // Title'ı checkbox'ın bulunduğu li öğesinden al
+                const title = checkbox.closest('li').querySelector('span.todo-title').textContent;
+
+                // Güncellenmiş veriyi oluştur
+                const todoItem = {
+                    id: id,
+                    isCompleted: isChecked,
+                    title: title
+                };
+
+                console.log("Sending updated todo item:", todoItem); // Veriyi kontrol et
+
+                // API'ye PUT isteğini gönder
+                const response = await fetch(`${apiUrl}/${id}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(todoItem) // JSON.stringify ile doğru formatta gönderiyoruz
+                });
+
+                // Yanıtın başarılı olup olmadığını kontrol et
+                if (response.ok) {
+                    console.log("Task updated successfully");
+                    loadTodos(); // Todo listesini yeniden yükleyin
+                } else {
+                    // Yanıt başarılı değilse metin olarak al
+                    const errorText = await response.text(); // Yanıtın metin olarak alınması
+                    console.error("Failed to update task. Response status:", response.status);
+                    console.error("Error response text:", errorText);
+                    alert(`Failed to update task: ${errorText}`);
+                }
+            } catch (error) {
+                // Hata mesajını daha ayrıntılı yazdıralım
+                console.error("Error while updating task status:", error.message || error);
+                alert("Error while updating task status.");
+            }
+        }
+
+    
+    </script>
+</body>
+</html>

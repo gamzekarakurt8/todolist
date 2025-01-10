@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\views\\index\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\views\\index\\giris.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\controllers\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\controllers\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|c:\\users\\gmzek\\onedrive\\masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F536AFC-7073-4AC9-ACAA-FA761A1FED27}|todolist\\todolist.csproj|solutionrelative:todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Program.cs",
+              "RelativeDocumentMoniker": "todolist\\Program.cs",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Program.cs",
+              "RelativeToolTip": "todolist\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:34:46.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "todolist\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Properties\\launchSettings.json",
+              "RelativeToolTip": "todolist\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-08T12:24:28.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Giris.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Views\\index\\Giris.cshtml",
+              "RelativeDocumentMoniker": "todolist\\Views\\index\\Giris.cshtml",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Views\\index\\Giris.cshtml",
+              "RelativeToolTip": "todolist\\Views\\index\\Giris.cshtml",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAMAAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-08T12:10:22.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "index.cs",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Controllers\\index.cs",
+              "RelativeDocumentMoniker": "todolist\\Controllers\\index.cs",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Controllers\\index.cs",
+              "RelativeToolTip": "todolist\\Controllers\\index.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:06:18.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "todocontroller.cs",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Controllers\\todocontroller.cs",
+              "RelativeDocumentMoniker": "todolist\\Controllers\\todocontroller.cs",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\Controllers\\todocontroller.cs",
+              "RelativeToolTip": "todolist\\Controllers\\todocontroller.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwEcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:07:00.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "todo.cs",
+              "DocumentMoniker": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\models\\todo.cs",
+              "RelativeDocumentMoniker": "todolist\\models\\todo.cs",
+              "ToolTip": "C:\\Users\\gmzek\\OneDrive\\Masa\u00FCst\u00FC\\alisverissitesi\\todolist\\todolist\\models\\todo.cs",
+              "RelativeToolTip": "todolist\\models\\todo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T21:54:48.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
